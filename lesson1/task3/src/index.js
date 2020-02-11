@@ -4,12 +4,6 @@ import './styles.css';
 
 const rootElement = document.querySelector('#root');
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles.css';
-
-const rootElement = document.querySelector('#root');
-
 const element = (
     <div className="greeting">
         <h1 className="greeting__title">Hello, world!</h1>
@@ -18,5 +12,3 @@ const element = (
 );
 
 ReactDOM.render(element, rootElement);
-
-
