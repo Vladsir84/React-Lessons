@@ -2,15 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
 
-const rootElement = document.querySelector('#root');
+const rootElem = document.querySelector('#root');
 
-const element = ( <
+const container = ( <
     div className = "greeting" >
     <
-    div className = "greeting__title" > Hello, world! < /div>   <
-    div className = "greeting__text" > I 'm learning React</div>     < /
-    div >
+    h1 className = "greeting__title" > Hello, world! < /h1> <
+    p className = "greeting__text" > I 'm learning React</p> <
+    /div>
 );
 
-
-ReactDOM.render(element, rootElement);
+ReactDOM.render(container, rootElem);
