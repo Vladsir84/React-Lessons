@@ -1,7 +1,9 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
 
 module.exports = {
-      module: {
+    
+    module: {
         rules: [{
                 test: /.js$/,
                 use: ["babel-loader"]
@@ -16,5 +18,9 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html"
         })
-    ]
+    ],
+    outputPath:  [
+        path.resolve(__dirname, 'review_build')
+        ],  
+
 };
