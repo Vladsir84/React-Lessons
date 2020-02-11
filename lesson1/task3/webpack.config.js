@@ -1,7 +1,8 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    module: {
+      
+                module: {
         rules: [{
                 test: /.js$/,
                 use: ["babel-loader"]
