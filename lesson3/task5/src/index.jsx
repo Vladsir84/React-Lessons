@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Greeting from './Profile';
+import Profile from './Profile';
 
 const rootElement = document.querySelector('#root');
 
@@ -15,7 +15,7 @@ const userData = {
 
 
 ReactDOM.render(
-    <Greeting
+    <Profile
     userData = {userData}     
     />,
     rootElement
