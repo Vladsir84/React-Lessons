@@ -1,7 +1,7 @@
 import React from 'react';
 import Comment from './Comment';
 
-const author = {
+ const author = {
     name: 'Tom',
     avatarUrl: 'https://avatars3.githubusercontent.com/u10001',
 };
