@@ -9,6 +9,7 @@ function Profile(props) {
       <div className="greeting__name">
         {`${props.userData.firstName} ${props.userData.lastName}`}
       </div>
+      
       <div className="greeting__birth">
         {`Was born ${getDate(props.userData.birthDate)} in ${props.userData.birthPlace}`}
       </div>
