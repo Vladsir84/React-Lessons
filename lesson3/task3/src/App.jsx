@@ -1,7 +1,7 @@
 import React from 'react';
 import Comment from './Comment';
 
-const author = {
+const userInfo = {
     name: 'Tom',
     avatarUrl: 'https://avatars3.githubusercontent.com/u10001',
   };
@@ -9,10 +9,7 @@ const author = {
 const App = () => {
   return (
     <Comment 
-    author={{
-      name: 'Tom',
-      avatarUrl: 'https://avatars3.githubusercontent.com/u10001',
-    }}
+    user={userInfo}
     text="Good job!"
     date={new Date('2019-01-01T11:32:19.566Z')}
     /> 
