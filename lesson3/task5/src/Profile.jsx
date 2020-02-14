@@ -3,7 +3,7 @@ import moment from "moment";
 
 const getDate = date => moment(date).format("DD MMM YY");
 
-function Profile(props) {
+function Greeting(props) {
   return (
     <>
       <div className="profile__name">
@@ -16,4 +16,4 @@ function Profile(props) {
   );
 };
 
-export default Profile;
+export default Greeting;
