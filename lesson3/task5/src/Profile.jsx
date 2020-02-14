@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 
-const getDate = date => moment(date).format("DD MMM YYYY");
+const getDate = date => moment(date).format("DD MMM YY");
 
 function Profile(props) {
   return (
