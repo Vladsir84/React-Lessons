@@ -16,7 +16,7 @@ const userData = {
 
 ReactDOM.render(
     <Profile
-    userInfo = {userData}     
+    userData = {userData}     
     />,
     rootElement
 );
