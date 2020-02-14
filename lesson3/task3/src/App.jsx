@@ -9,7 +9,10 @@ const author = {
 const App = () => {
   return (
     <Comment 
-    name={author}
+    author={{
+      name: 'Tom',
+      avatarUrl: 'https://avatars3.githubusercontent.com/u10001',
+    }}
     text="Good job!"
     date={new Date('2019-01-01T11:32:19.566Z')}
     /> 
