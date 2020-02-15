@@ -1,7 +1,6 @@
 import React from 'react';
-import './Avatar.scss';
 
-const Avatar = (props) => {
+const UserAvatar = (props) => {
     return (
         <img
             className="avatar"
@@ -11,4 +10,4 @@ const Avatar = (props) => {
     );
 }
 
-export default Avatar;
+export default UserAvatar;
