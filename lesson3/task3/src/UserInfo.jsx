@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from './Avatar';
 
-const AuthorInfo = props => {
+const UserInfo = props => {
     return (
         <div className="user-info">
          <Avatar 
@@ -15,4 +15,4 @@ const AuthorInfo = props => {
     );
 };
 
-export default AuthorInfo;
+export default UserInfo;
