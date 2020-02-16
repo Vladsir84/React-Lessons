@@ -1,18 +1,18 @@
 import React from 'react';
-import UserAvatar from './Avatar';
+import UserAvatar from './UserAvatar';
 
-const AuthorInfo = props => {
+const UserInfo = props => {
     return (
         <div className="user-info">
-            <UserAvatar
-                avatarUrl={props.author.avatarUrl}
-                name={props.author.name}
-            />
-            <div className="user-info__name">
-                {props.author.name}
-            </div>
+         <UserAvatar 
+         avatarUrl={props.user.avatarUrl} 
+         name={props.user.name} />
+        <div className="user-info__name">
+            {props.user.name}
         </div>
+      </div> 
+            
     );
 };
 
-export default AuthorInfo;
+export default UserInfo;

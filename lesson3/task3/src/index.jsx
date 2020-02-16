@@ -5,7 +5,7 @@ import Comment from './Comment';
 
 const rootElement = document.querySelector('#root');
 
- const authorInfo = {
+ const userInfo = {
     name: 'Tom',
     avatarUrl: 'https://avatars3.githubusercontent.com/u10001',
   };
@@ -13,7 +13,7 @@ const rootElement = document.querySelector('#root');
 ReactDOM.render(
 
     <Comment 
-    author={authorInfo}
+    user={userInfo}
     text="Good job!"
     date={new Date('2019-01-01T11:32:19.566Z')}
     />, 
