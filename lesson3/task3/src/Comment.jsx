@@ -6,8 +6,9 @@ import moment from 'moment';
 const formatDate = date => moment(date).format('DD MMM YYYY');
 
 function Comment(props) {
-  return (
-    <div className="comment">
+  console.log(props); // author: {name: "Tom", avatarUrl: "https://avatars3.githubusercontent.com/u10001"}
+  return (                              // text: "Good job!"   date: Tue Jan 01 2019 13:32:19 GMT+0200 (Восточная Европа, стандартное время) {}
+    <div className="comment">           
       <UserInfo user={props.author} />
       <div className="comment__text">
         {props.text}
