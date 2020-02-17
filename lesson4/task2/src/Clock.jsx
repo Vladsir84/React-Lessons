@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import './clock.scss';
 
-function timeToString(date) {
-  let hour = new Date(new Date().setHours(new Date().getHours() + date)).getHours();
-  let minute = new Date().getMinutes();
-  let second = new Date().getSeconds();
-  return `${hour}:${minute}:${second}`;
+function timeToString(offset) {
+  const getTime = new Date();
+  const timeWthOffset = getTime.setHours(getTime.getHours() + offset);
+  return moment(timeWthOffset).format('LTS');
 
 }
 
@@ -15,12 +15,12 @@ class Clock extends Component {
     super(props);
 
     this.state = {
-      time: '00:00:00',
+      time: timeToString(props.offset),
     };
 
     setInterval(() => {
       this.setState({
-        time: timeToString(this.props.offset),
+        time: timeToString(props.offset),
       });
     }, 1000)
   }
@@ -29,7 +29,7 @@ class Clock extends Component {
     return (
       <div className="clock">
         <div className="clock__location">
-          {`${this.props.location}`}
+          {this.props.location}
         </div>
         <div className="clock__time">
           {this.state.time}
