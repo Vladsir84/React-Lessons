@@ -4,7 +4,7 @@ class GoodButton extends React.Component {
   handleClick(e) {
     // console.log(e.screenX);   
     // console.log(e);
-    alert('Good job!');
+    alert('Click me!');
   }
   render() {
      return (
