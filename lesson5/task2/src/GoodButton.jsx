@@ -11,7 +11,7 @@ class GoodButton extends React.Component {
       className="fancy-button"
       onClick={this.handleClick}
     >
-      Click me!
+      Good job!
     </button>
      );
    }
