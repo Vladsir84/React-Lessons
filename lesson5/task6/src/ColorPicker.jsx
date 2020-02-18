@@ -7,11 +7,11 @@ const BISQUE = 'Bisque';
 class ColorPicker extends Component {
   constructor(props) {
     super(props);
-      this.state = {
-        text: '',
+    this.state = {
+      text: '',
     };
-}
-  
+  }
+
   setBodyColor = color => {
     this.setState({
       text: color
@@ -20,17 +20,17 @@ class ColorPicker extends Component {
 
   clearColor = () => {
     this.setState({
-     text: ''
+      text: ''
     });
   }
-  
-  
+
+
   render() {
     return (
-      <div>
+      <>
         <div className="picker__title">
-        {this.state.text}
-      </div>
+          {this.state.text}
+        </div>
         <div>
           <button className="picker__button picker__button_coral"
             onMouseOver={this.setBodyColor.bind(this, CORAL)}
@@ -48,7 +48,7 @@ class ColorPicker extends Component {
             onMouseOut={this.clearColor.bind(this)}
           />
         </div>
-      </div>
+      </>
     );
   }
 }
