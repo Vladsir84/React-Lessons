@@ -18,6 +18,13 @@ class ColorPicker extends Component {
     });
   }
 
+  clearColor = () => {
+    this.setState({
+     text: ''
+    });
+  }
+  
+  
   render() {
     return (
       <div>
@@ -27,24 +34,18 @@ class ColorPicker extends Component {
         <div>
           <button className="picker__button picker__button_coral"
             onMouseOver={() => this.setBodyColor(CORAL)}
-            onMouseOut={() => this.setState({
-              text: ' '
-            })}
+            onMouseOut={() => this.clearColor()}
           />
 
           <button className="picker__button picker__button_aqua"
             onMouseOver={() => this.setBodyColor(AQUA)}
-            onMouseOut={() => this.setState({
-              text: ' '
-            })}
+            onMouseOut={() => this.clearColor()}
 
           />
 
           <button className="picker__button picker__button_bisque"
             onMouseOver={() => this.setBodyColor(BISQUE)}
-            onMouseOut={() => this.setState({
-              text: ' '
-            })}
+            onMouseOut={() => this.clearColor()}
           />
         </div>
       </div>
