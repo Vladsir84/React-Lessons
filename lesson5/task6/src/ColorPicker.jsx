@@ -7,7 +7,7 @@ const BISQUE = 'Bisque';
 class ColorPicker extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+      this.state = {
         text: ' ',
     };
 }
@@ -28,7 +28,7 @@ class ColorPicker extends Component {
   render() {
     return (
       <div>
-        <div class="picker__title">
+        <div className="picker__title">
         {this.state.text}
       </div>
         <div>
