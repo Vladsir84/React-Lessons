@@ -33,19 +33,19 @@ class ColorPicker extends Component {
       </div>
         <div>
           <button className="picker__button picker__button_coral"
-            onMouseOver={() => this.setBodyColor(CORAL)}
-            onMouseOut={() => this.clearColor()}
+            onMouseOver={this.setBodyColor.bind(this, CORAL)}
+            onMouseOut={this.clearColor.bind(this)}
           />
 
           <button className="picker__button picker__button_aqua"
-            onMouseOver={() => this.setBodyColor(AQUA)}
-            onMouseOut={() => this.clearColor()}
+            onMouseOver={this.setBodyColor.bind(this, AQUA)}
+            onMouseOut={this.clearColor.bind(this)}
 
           />
 
           <button className="picker__button picker__button_bisque"
-            onMouseOver={() => this.setBodyColor(BISQUE)}
-            onMouseOut={() => this.clearColor()}
+            onMouseOver={this.setBodyColor.bind(this, BISQUE)}
+            onMouseOut={this.clearColor.bind(this)}
           />
         </div>
       </div>
