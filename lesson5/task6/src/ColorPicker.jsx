@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 
+const CORAL = 'Coral';
+const AQUA = 'Aqua';
+const BISQUE = 'Bisque';
+
 class ColorPicker extends Component {
   constructor(props) {
     super(props);
@@ -22,14 +26,14 @@ class ColorPicker extends Component {
       </div>
         <div>
           <button className="picker__button picker__button_coral"
-            onMouseOver={() => this.setBodyColor('Coral')}
+            onMouseOver={() => this.setBodyColor(CORAL)}
             onMouseOut={() => this.setState({
               text: ' '
             })}
           />
 
           <button className="picker__button picker__button_aqua"
-            onMouseOver={() => this.setBodyColor('Aqua')}
+            onMouseOver={() => this.setBodyColor(AQUA)}
             onMouseOut={() => this.setState({
               text: ' '
             })}
@@ -37,7 +41,7 @@ class ColorPicker extends Component {
           />
 
           <button className="picker__button picker__button_bisque"
-            onMouseOver={() => this.setBodyColor('Bisque')}
+            onMouseOver={() => this.setBodyColor(BISQUE)}
             onMouseOut={() => this.setState({
               text: ' '
             })}
