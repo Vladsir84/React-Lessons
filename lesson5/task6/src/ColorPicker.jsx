@@ -27,7 +27,7 @@ class ColorPicker extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <div className="picker__title">
           {this.state.text}
         </div>
@@ -48,7 +48,7 @@ class ColorPicker extends Component {
             onMouseOut={this.clearColor.bind(this)}
           />
         </div>
-      </>
+      </div>
     );
   }
 }
