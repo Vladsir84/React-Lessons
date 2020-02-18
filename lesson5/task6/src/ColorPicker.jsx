@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const CORAL = 'Coral';
-const AQUA = 'Aqua';
-const BISQUE = 'Bisque';
+const CORAL = 'coral';
+const AQUA = 'aqua';
+const BISQUE = 'bisque';
 
 class ColorPicker extends Component {
   constructor(props) {
