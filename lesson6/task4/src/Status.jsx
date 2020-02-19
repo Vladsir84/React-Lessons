@@ -5,12 +5,10 @@ import Offline from './Offline';
 
 const Status = props => {
   
-  
- 
-    return (
+  return (
      
         <>     
-          { props.isOffline
+          { props.isOnline
 
             ? <Online  />
             : <Offline />}
