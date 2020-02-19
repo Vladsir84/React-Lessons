@@ -6,14 +6,14 @@ import Offline from './Offline';
 class Status extends Component {
   
   state = {
-      Offline: false
+      isOnline: true
   };
 
   render() {
     return (
       <div className="status">
         {
-          this.state.Offline
+          this.state. isOnline
 
             ? <Online  />
             : <Offline />
