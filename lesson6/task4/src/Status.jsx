@@ -10,13 +10,13 @@ class Status extends Component {
   };
 
   state = {
-    Offline: false
+    isOffline: false
 };
   
   render() {
     return (
      
-        
+          
           this.state.isOffline
 
             ? <Online  />
