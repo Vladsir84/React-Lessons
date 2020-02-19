@@ -5,7 +5,7 @@ import Offline from './Offline';
 
 class Status extends Component {
   state = {
-    isOnline: false
+    isOnline: true
   };
   render() {
   return (
