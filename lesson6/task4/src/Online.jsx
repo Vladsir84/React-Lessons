@@ -6,7 +6,7 @@ const Online = () => {
         <>
             All good!
         </>
-    )
+    );
 };
 
 export default Online;

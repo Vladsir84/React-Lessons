@@ -1,4 +1,4 @@
-import React, {Component } from 'react';
+import React, { Component } from 'react';
 import Online from './Online';
 import Offline from './Offline';
 
@@ -14,26 +14,26 @@ class Status extends Component {
 
   isOnline = () => {
     this.setState({
-      isLoggedIn: true,
+      isOnline: true,
     });
   }
 
   Offline = () => {
     this.setState({
-      isLoggedIn: false,
+      Offline: false,
     });
   }
-  
+
   render() {
-  return (
-      
-        
-        this.state.isOnline 
-          
-            ? <Online />
-            : <Offline />
-        
-      
+    return (
+      <div className="status">
+        {
+          this.state.isOnline
+
+            ? <Online isOnline={this.isOnline} />
+            : <Offline Offline={this.Offline} />
+        }
+      </div>
     );
   }
 }
