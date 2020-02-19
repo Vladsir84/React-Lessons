@@ -5,7 +5,7 @@ const Offline = () => {
     return (
 
         <>
-            <span className="status__btn">Offline</span>
+            <span className="status__text">Offline</span>
             <button className="status__btn">Reconnect</button>
         </>
     )
