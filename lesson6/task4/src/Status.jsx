@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Online from './Online';
 import Offline from './Offline';
 
