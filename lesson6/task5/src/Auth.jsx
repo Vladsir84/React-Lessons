@@ -3,40 +3,47 @@ import Spinner from './Spinner';
 import Login from './Login';
 import Logout from './Logout';
 
+
 class Auth extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       isLoggedIn: false,
+      moveOfSpinner: true,
     };
   }
 
   onLogin = () => {
     this.setState({
       isLoggedIn: true,
-    });
-  }
+    })
+      setTimeout(() => {
+         this.setState({  
+          moveOfSpinner: false,
+        })   
+      }, 2000);
+   }
 
   onLogout = () => {
     this.setState({
       isLoggedIn: false,
+      moveOfSpinner: true,
     });
   }
 
   render() {
-    return (
-      <div className="panel">
-        <Greeting isLoggedIn={this.state.isLoggedIn} />
-        {
-          this.state.isLoggedIn
-            ? <Logout onLogout={this.onLogout} />
-            : <Login onLogin={this.onLogin} />
-        }
-      </div>
+   
+        const notSpinner = !this.state.moveOfSpinner ?
+        <Logout onLogout={() => this.onLogout} />  :
+        <Spinner size={35} />    
+        
+          return (
+                 !this.state.isLoggedIn ?
+                <Login onLogin={this.onLogin} /> :
+                 notSpinner 
     )
   }
 }
-
 
 export default Auth;
