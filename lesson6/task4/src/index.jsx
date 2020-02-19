@@ -6,4 +6,4 @@ import Status from './Status';
 const rootElement = document.querySelector('#root');
 
 
-ReactDOM.render(<Status isOnline={false} />, rootElement);
+ReactDOM.render(<Status />, rootElement);
