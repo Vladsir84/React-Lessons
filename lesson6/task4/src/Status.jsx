@@ -9,15 +9,15 @@ class Status extends Component {
       isOnline: true
   };
 
-//   state = {
-//     Offline: false
-// };
+  state = {
+    Offline: false
+};
   
   render() {
     return (
      
         
-          this.state.isOnline
+          this.state.isOffline
 
             ? <Online  />
             : <Offline />
