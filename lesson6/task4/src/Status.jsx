@@ -3,29 +3,22 @@ import Online from './Online';
 import Offline from './Offline';
 
 
-class Status extends Component {
+const Status = props => {
   
-  state = {
-      isOnline: true
-  };
-
-  state = {
-    isOffline: false
-};
   
-  render() {
+ 
     return (
      
-          
-          this.state.isOffline
+        <>     
+          { props.isOffline
 
             ? <Online  />
-            : <Offline />
-        
+            : <Offline />}
+        </> 
       
-    );
-  }
-}
+    )
+  };
+
 
 
 export default Status;
