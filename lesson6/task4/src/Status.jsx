@@ -7,6 +7,12 @@ class Status extends Component {
   state = {
     isOnline: true
   };
+  
+  
+  state = {
+    Offline: false
+  };
+  
   render() {
   return (
       
