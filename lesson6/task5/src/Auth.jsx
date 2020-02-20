@@ -43,7 +43,6 @@ class Auth extends React.Component {
         }
 
         if (this.state.isLogged == true) {
-           
             return <Spinner size={35}/>
         }
     }
