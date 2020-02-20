@@ -4,18 +4,16 @@ import Offline from './Offline';
 
 
 const Status = props => {
-  
-  return (
-     
-        <>     
-          { props.isOnline
 
-            ? <Online  />
-            : <Offline />}
-        </> 
-      
-    )
-  };
+  return (
+    <>
+
+      {props.isOnline ? <Online /> : <Offline />}
+
+    </>
+
+  )
+};
 
 
 
