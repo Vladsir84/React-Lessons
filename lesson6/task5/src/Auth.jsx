@@ -18,6 +18,11 @@ class Auth extends React.Component {
         this.setState({
             isLogged: true,
         })
+        setTimeout(() => {
+            this.setState({
+              moveOfSpinner: true,
+            })
+        }, 2000)
     }
 
     onLogout = () => {
@@ -38,11 +43,7 @@ class Auth extends React.Component {
         }
 
         if (this.state.isLogged == true) {
-            setTimeout(() => {
-                this.setState({
-                  moveOfSpinner: true,
-                })
-            }, 2000)
+           
             return <Spinner size={35}/>
         }
     }
