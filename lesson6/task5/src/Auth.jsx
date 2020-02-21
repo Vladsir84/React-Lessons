@@ -39,12 +39,12 @@ class Auth extends React.Component {
         }
 
         if (this.state.isLogged == true) {
-            return <Spinner size={35}/> && <Logout onLogout={this.onLogout} />
+            return <Logout onLogout={this.onLogout} />
         }
 
-        // if (this.state.isLogged == true) {
-        //     return <Spinner size={35}/>
-        // }
+        if (this.state.moveOfSpinner == true) {
+            return <Spinner size={35}/>
+        }
     };
 
 };
