@@ -9,8 +9,8 @@ class Auth extends React.Component {
         
         
         this.state = {
-            isLogged: false,
-            moveOfSpinner: false,
+            isLogged: false,          
+            moveOfSpinner: true,
         }
     }
 
@@ -20,7 +20,7 @@ class Auth extends React.Component {
         })
         setTimeout(() => {
             this.setState({
-              moveOfSpinner: true,
+              moveOfSpinner: false,
             })
         }, 2000)
     }
@@ -28,24 +28,25 @@ class Auth extends React.Component {
     onLogout = () => {
         this.setState({
             isLogged: false,
-            moveOfSpinner: false,
+            moveOfSpinner: true,
         })
     }
 
     render() {
         
-      if (this.state.isLogged == false) {
+        if (this.state.isLogged == false) {
             return <Login onLogin={this.onLogin} />
         }
 
-        if (this.state.moveOfSpinner == true) {
-            return <Logout onLogout={this.onLogout} />
+        if (this.state.isLogged == true) {
+            return <Spinner size={35}/> && <Logout onLogout={this.onLogout} />
         }
 
-        if (this.state.isLogged == true) {
-            return <Spinner size={35}/>
-        }
-    }
-}
+        // if (this.state.isLogged == true) {
+        //     return <Spinner size={35}/>
+        // }
+    };
+
+};
 
 export default Auth;
