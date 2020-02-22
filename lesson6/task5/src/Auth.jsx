@@ -8,7 +8,7 @@ class Auth extends React.Component {
         super(props);
         
         
-        this.state = {
+        this.state = {           // default state
             isLogged: false,          
             moveOfSpinner: false,
         }
@@ -34,12 +34,12 @@ class Auth extends React.Component {
 
     render() {
         
-       
+         
         if (this.state.isLogged == false) {
-            return <Login onLogin={this.onLogin} />
+            return <Login onLogin={this.onLogin} />      
         }
-        if (this.state.moveOfSpinner == true) {
-            return <Spinner size={35}/>
+        if (this.state.moveOfSpinner == true) {             // sequence
+            return <Spinner size={35}/> 
         }
         if (this.state.isLogged == true) {
             return <Logout onLogout={this.onLogout} />
