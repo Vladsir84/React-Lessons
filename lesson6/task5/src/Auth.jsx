@@ -10,7 +10,7 @@ class Auth extends React.Component {
         
         this.state = {
             isLogged: false,          
-            moveOfSpinner: true,
+            moveOfSpinner: false,
         }
     }
 
@@ -34,17 +34,17 @@ class Auth extends React.Component {
 
     render() {
         
+       
         if (this.state.isLogged == false) {
             return <Login onLogin={this.onLogin} />
         }
-
+        if (this.state.moveOfSpinner == true) {
+            return <Spinner size={35}/>
+        }
         if (this.state.isLogged == true) {
             return <Logout onLogout={this.onLogout} />
         }
 
-        if (this.state.moveOfSpinner == true) {
-            return <Spinner size={35}/>
-        }
     };
 
 };
