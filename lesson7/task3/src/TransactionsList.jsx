@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import User from './User'
+import Transaction from './Transaction'
 
 class TransactionsList extends Component {
     state = {
@@ -26,7 +26,7 @@ class TransactionsList extends Component {
              this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age
             );
         } else {
-            transactionsList = this.props.users;  
+            transactionsList = this.props.transas;  
         }
         
         return (
@@ -38,7 +38,7 @@ class TransactionsList extends Component {
 
                 <ul className="users">
                     {transactionsList.map(user => (
-                        <User key={user.id} {...user} />
+                        <Transaction key={user.id} {...user} />
                     ))}
                 </ul>
             </div>

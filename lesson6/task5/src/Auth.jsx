@@ -13,43 +13,37 @@ class Auth extends React.Component {
             moveOfSpinner: false,
         }
     }
-
+    
     onLogin = () => {
-        this.setState({isLogged: true,});
-        this.eventOfSpinner();
-    }
-
-    onLogout = () => {
-        this.setState({isLogged: false})
-        this.eventOfSpinner();
-    }
-     
-    eventOfSpinner = () => {
-        setTimeout(() => {
-          this.setState({
-            moveOfSpinner: false      // функция в свойстве eventOfSpinner отображает спиннер.
-          });
-        }, 2000);
         this.setState({
             moveOfSpinner: true
-        });
-      };
+        }) 
+        setTimeout(() => {
+            ({
+           isLogged: true,
+           moveOfSpinner: false,
+           })
+        }, 2000);
+     }
     
+    onLogout = () => {
+        this.setState({
+            isLogged: false,
+            moveOfSpinner: false,
+        })
+            
+    }
+     
     render() {
-        if (this.state.isLogged == false) {
-            return <Login onLogin={this.onLogin} />
-        }
         
-        if (this.state.moveOfSpinner == true) {             // sequence
+        if (this.state.moveOfSpinner == true) {             
             return <Spinner size={35} />
         }
 
-        if (this.state.isLogged == true) {
-            return <Logout onLogout={this.onLogout} />
-        }
-
+        return this.state.isLogged
+            ? <Logout onLogout={this.onLogout} />
+            : <Login onLogin={this.onLogin} />
+        };
     };
-
-};
 
 export default Auth;
