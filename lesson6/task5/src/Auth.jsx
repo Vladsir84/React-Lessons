@@ -27,7 +27,7 @@ class Auth extends React.Component {
     eventOfSpinner = () => {
         setTimeout(() => {
           this.setState({
-            moveOfSpinner: false      // функция в свойство eventOfSpinner отображает спиннер.
+            moveOfSpinner: false      // функция в свойстве eventOfSpinner отображает спиннер.
           });
         }, 2000);
         this.setState({
