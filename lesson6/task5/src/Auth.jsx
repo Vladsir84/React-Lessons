@@ -16,7 +16,6 @@ class Auth extends React.Component {
     
     onLogin = () => {
         this.setState({
-          
             moveOfSpinner: true,
         }) 
         setTimeout(() => {
