@@ -14,14 +14,14 @@ class UsersList extends Component {
     goPrev = () => {
 
         this.setState({
-            currentPage : this.state - 1,
+            currentPage : this.state.currentPage - 1,
         });
     }
 
     goNext = () => {
 
         this.setState({
-            currentPage: this.state + 1,
+            currentPage: this.state.currentPage + 1,
         });
     }
 
