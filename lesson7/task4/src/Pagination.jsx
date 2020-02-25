@@ -6,14 +6,30 @@ const Pagination = props => {
         <div className="pagination">
             <button className="btn"
                 onClick={props.goPrev}
-                disabled={props.disabled}
-            >←</button>
+                disabled={props.currentPage === 0
+                    ? 'disabled'
+                    : ''
+                }>
+                {
+                    props.currentPage === 0
+                        ? ''
+                        : '←'
+                }
+            </button>
             <span className="pagination__page">{props.currentPage + 1}</span>
 
             <button className="btn"
                 onClick={props.goNext}
-                disabled={props.disabled}
-            >→</button>
+                disabled={(props.currentPage + 1) * 3 >= props.totalItems
+                    ? 'disabled'
+                    : ''             
+                }>
+            {(props.currentPage + 1) * 3 >= props.totalItems
+                ? ''
+                : '→'
+                     
+            }
+           </button>
         </div>
 
     );

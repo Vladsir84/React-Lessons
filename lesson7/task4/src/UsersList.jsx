@@ -14,7 +14,7 @@ class UsersList extends Component {
     goPrev = () => {
 
         this.setState({
-            currentPage: this.state - 1,
+            currentPage : this.state - 1,
         });
     }
 
@@ -28,19 +28,18 @@ class UsersList extends Component {
 
     render() {
 
-        let usersList = this.props.users
-            .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
-            .sort((a, b) => a.age - b.age);
+        const currentPage = this.state.currentPage;
+        const usersList = this.props.users.slice(currentPage * 3, currentPage * 3 + 3);
 
 
         return (
             <div>
                 <Pagination
-                    goPrev={this.state.goPrev}
+                    goPrev={this.goPrev}
                     currentPage={this.state.currentPage}
                     totalItems={this.props.users.length}
-                    itemsPerPage={this.state.Users}
-                    goNext={this.state.goNext}
+                    itemsPerPage={this.state.usersList}
+                    goNext={this.goNext}
                 />
 
                 <ul className="users">
