@@ -3,10 +3,14 @@ import User from './User'
 import Pagination from './Pagination'
 
 class UsersList extends Component {
-    state = {
-        currentPage: 0, itemsPerPage: 3
-    }
+    constructor(props) {
+        super(props)
 
+        this.state = {
+            currentPage: 0,
+        }
+    }
+    
     goPrev = () => {
 
         this.setState({
@@ -23,11 +27,11 @@ class UsersList extends Component {
 
 
     render() {
-        
+
         let usersList = this.props.users
-        .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
-        .sort((a, b) => a.age - b.age);
-        
+            .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
+            .sort((a, b) => a.age - b.age);
+
 
         return (
             <div>
