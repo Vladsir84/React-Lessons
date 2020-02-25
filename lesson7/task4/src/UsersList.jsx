@@ -23,15 +23,11 @@ class UsersList extends Component {
 
 
     render() {
-        let usersList = this.props.users;
-
-        if (this.state.sorting) {
-            usersList = this.props.users.slice()
-                .sort((a, b) => a.age - b.age
-                );
-        } else {
-            usersList = this.props.users;
-        }
+        
+        let usersList = this.props.users
+        .slice(this.state.currentPage * 3, this.state.currentPage * 3 + 3)
+        .sort((a, b) => a.age - b.age);
+        
 
         return (
             <div>
