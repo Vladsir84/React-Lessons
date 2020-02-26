@@ -37,8 +37,8 @@ class UsersList extends Component {
                 <Pagination
                     goPrev={this.goPrev}
                     currentPage={this.state.currentPage}
-                    totalItems={this.props.users.length}
-                    itemsPerPage={this.state.usersList}
+                    totalItems={3}
+                    itemsPerPage={2}
                     goNext={this.goNext}
                 />
 
