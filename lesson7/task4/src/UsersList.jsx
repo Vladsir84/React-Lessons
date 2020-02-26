@@ -12,22 +12,16 @@ class UsersList extends Component {
     }
     
     goPrev = () => {
-        const currentPage1 = this.state.currentPage === 0 
-        ? 'disabled' 
-        : '';
-        
+
         this.setState({
-            currentPage : currentPage1 - 1,
+            currentPage : this.state.currentPage - 1,
         });
     }
 
     goNext = () => {
-        const currentPage2 = (this.props.currentPage + 1) * 3 >= props.totalItems 
-        ? 'disabled' 
-        : '';
-        
+
         this.setState({
-            currentPage: currentPage2 + 1,
+            currentPage: this.state.currentPage + 1,
         });
     }
 
@@ -36,7 +30,8 @@ class UsersList extends Component {
 
         const currentPage = this.state.currentPage;
         const usersList = this.props.users.slice(currentPage * 3, currentPage * 3 + 3);
-        
+
+
         return (
             <div>
                 <Pagination
