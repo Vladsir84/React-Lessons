@@ -1,18 +1,27 @@
 import React, { Component } from 'react';
+import moment from 'moment';
+
+function timeToString(offset) {
+    const getTime = new Date();
+    const timeWthOffset = getTime.setHours(getTime.getHours() + offset);
+    return moment(timeWthOffset).format('LTS');
+  
+  }
+
 
 class Clock extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            date: new Date(),
+            date: timeToString(props.offset),
         };
     }
 
     componentDidMount() {
         this.interval = setInterval(() => {
             this.setState({
-                date: new Date(),
+                date: timeToString(this.props.offset),
             });
         }, 1000);
     }
@@ -28,10 +37,8 @@ class Clock extends Component {
                 {this.props.location}
             </div>
             <div className="clock__time">
-                {this.state.date.toLocaleTimeString()}
+                {this.state.date}
             </div>
-
-
         </div>;
     }
 }
