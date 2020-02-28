@@ -10,7 +10,7 @@ class Clock extends Component {
     }
 
     componentDidMount() {
-     this.interval = setInterval(() => {
+        this.interval = setInterval(() => {
             this.setState({
                 date: new Date(),
             });
@@ -18,11 +18,21 @@ class Clock extends Component {
     }
 
     componentWillUnmount() {
-       clearInterval(this.interval);
+        clearInterval(this.interval);
     }
-    
+
     render() {
-        return <div className="clock">{this.state.date.toLocaleTimeString()}</div>;
+        return <div className="clock">
+
+            <div className="clock__location">
+                {this.props.location}
+            </div>
+            <div className="clock__time">
+                {this.state.date.toLocaleTimeString()}
+            </div>
+
+
+        </div>;
     }
 }
 
