@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-const timeToString = offset => {
-    return moment(new Date().setHours(new Date().getHours() + offset)).format('LTS');
-};
+function timeToString(offset) {
+    const getTime = new Date();
+    const timeWthOffset = getTime.setHours(getTime.getHours() + offset);
+    return moment(timeWthOffset).format('LTS');
+  
+  }
 
 
 class Clock extends Component {
