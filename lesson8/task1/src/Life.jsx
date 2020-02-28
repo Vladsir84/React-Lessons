@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 
 class Life extends Component {
@@ -10,11 +10,13 @@ class Life extends Component {
         console.log('componentDidMount: API calls, subscriptions ');
     }
     
-    shouldComponentUpdate() {
+    shouldComponentUpdate(nextProps, nextState) {
+        
         console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
+        return true; 
     }
     
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
         console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
     }
     
@@ -23,7 +25,7 @@ class Life extends Component {
     }
     render() {
         console.log('React element to build DOM');
-        return <div className="text">{this.props.text}</div>
+        return  <div className="text">Text</div>
     }
 };
 
