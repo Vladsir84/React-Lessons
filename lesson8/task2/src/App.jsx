@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Clock from './Clock'
-// import { render } from 'react-dom';
+
 
 
 class App extends Component {
@@ -23,7 +23,9 @@ class App extends Component {
        return ( 
         <div>
             <button onClick={this.toggle}>Toggle</button>
-            <div>{this.state.visible && <Clock />}</div>
+            <div className="clock__location clock__time">{this.state.visible && <Clock />}</div>
+            <div className="clock__location clock__time">{this.state.visible && <Clock />}</div>
+            <div className="clock__location clock__time">{this.state.visible && <Clock />}</div>
         </div>
        );
     }
