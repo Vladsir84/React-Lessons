@@ -12,7 +12,6 @@ class Life extends Component {
     
     shouldComponentUpdate(nextProps, nextState) {
         console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
-        return nextProps; 
     }
     
     componentDidUpdate(prevProps, prevState) {
@@ -24,7 +23,7 @@ class Life extends Component {
     }
     render() {
         console.log('return React element to build DOM');
-        return  <div className="text">Text</div>
+        return  <div className="number">Number</div>
     }
 };
 
