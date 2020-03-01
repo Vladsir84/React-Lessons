@@ -4,17 +4,17 @@ class ConnectionStatus extends Component {
     constructor(props) {
         super(props);
         this.state = {
-        state: true
+        state: true        // состояние по умолчанию
         }
     }
 
-    componentDidMount() {
+    componentDidMount() {                                             // подписка на событие
         window.addEventListener('online', this.onlineStatus);
-        window.addEventListener('offline', this.offlineStatus);
+        window.addEventListener('offline', this.offlineStatus);  
     }
 
 
-    componentWillUnmount() {
+    componentWillUnmount() {                                         // отписка от события
         window.removeEventListener('online', this.onlineStatus);
         window.removeEventListener('offline', this.offlineStatus);
     }
@@ -22,7 +22,7 @@ class ConnectionStatus extends Component {
    
     onlineStatus = () => {
         this.setState({
-          state: true
+           state: true
         });
     }
 
@@ -35,9 +35,9 @@ class ConnectionStatus extends Component {
     
     render() {
         return ( 
-        this.setState.state 
-        ? <div className="status status_offline">offline</div>
-        : <div className="status">online</div>
+        this.state 
+        ? <div className="status">online</div>
+        : <div className="status status_offline">offline</div>
         
         )
     }
