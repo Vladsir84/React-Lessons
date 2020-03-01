@@ -24,7 +24,7 @@ class ConnectionStatus extends Component {
         this.setState({
            state: true
         });
-    }
+    }                                    // статусы состояния
 
     offlineStatus = () => {
         this.setState({
@@ -35,7 +35,7 @@ class ConnectionStatus extends Component {
     
     render() {
         return ( 
-        this.state 
+        this.state.state 
         ? <div className="status">online</div>
         : <div className="status status_offline">offline</div>
         
