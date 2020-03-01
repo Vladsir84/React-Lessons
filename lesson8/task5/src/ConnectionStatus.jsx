@@ -1,48 +1,44 @@
 import React, { Component } from 'react';
 
-
-
 class ConnectionStatus extends Component {
-    state = {
-        status: online,
+    constructor(props) {
+        super(props);
+        this.state = {
+        state: true
+        }
     }
 
-
     componentDidMount() {
-        window.addEventListener('status', this.onStatus);
-
-        const { innerOnline, innerOffline } = window;
-        this.setDimensions(innerOnline, innerOffline );
+        window.addEventListener('online', this.onlineStatus);
+        window.addEventListener('offline', this.offlineStatus);
     }
 
 
     componentWillUnmount() {
-        window.removeEventListener('status', this.onStatus);
+        window.removeEventListener('online', this.onlineStatus);
+        window.removeEventListener('offline', this.offlineStatus);
     }
 
-    onStatus = e => {
-        const {innerOnline, innerOffline  } = e.target;
-        this.setDimensions(innerOnline, innerOffline )
-    };
-
-    setDimensions = (online, offline) => {
+   
+    onlineStatus = () => {
         this.setState({
-            online,
-            offline,
+          state: true
         });
-
-        document.title = `${innerOnline} x ${innerOffline}`;
     }
 
-
+    offlineStatus = () => {
+        this.setState({
+          state: false
+        });
+    }
+    
+    
     render() {
-        return (
-            <div className="status ">
-                <div className="status_offline">
-                    {`${this.state.offline}`}
-                </div>
-            </div>
-
+        return ( 
+        this.setState.state 
+        ? <div className="status status_offline">offline</div>
+        : <div className="status">online</div>
+        
         )
     }
 }
