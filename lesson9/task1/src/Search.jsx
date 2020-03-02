@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Search extends Component {
-    state = { value: 'good restaurant' }
+    state = { value: 'Search text: good restaurant' }
 
     handleChange = event => {
         event.persist();
