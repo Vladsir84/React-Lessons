@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class UserForm extends Component {
     state = {
         name: '',
@@ -23,7 +24,7 @@ class UserForm extends Component {
 
     handleSubmit = event => {
       event.preventDefault();
-      console.log(this.state);
+      this.props.createUser(this.state);
     }
     
     render() {
