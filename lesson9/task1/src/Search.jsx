@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Search extends Component {
-    state = { value: 'good restaurant' }
+    state = { value: '' }
 
     handleChange = event => {
         event.persist();
@@ -16,9 +16,9 @@ class Search extends Component {
     
     render() {
         return (
-            <form className="search" onSubmit={this.search}>
+            <form className="search" onSubmit={this.onSearch}>
                 <input type="text"
-                    onChange={this.handleChange}
+                    onChange={this.oninputChange}
                     value={this.state.value}
                     className="search__input"
                 />
