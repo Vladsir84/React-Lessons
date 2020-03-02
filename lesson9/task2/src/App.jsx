@@ -5,7 +5,7 @@ import UserForm from './UserForm';
 const App = () => {
 
     return (
-        <UserForm createUser={userData => console.log(userData)} />
+        <UserForm onSubmit={userData => console.log(userData)} />
 
         );
     };
