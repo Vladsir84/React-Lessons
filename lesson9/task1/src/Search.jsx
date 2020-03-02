@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Search extends Component {
     state = { value: '' }
 
-    handleChange = event => {
-        event.persist();
+    onInputChange = event => {
+     
         this.setState({ value: event.target.value })
     }
 
@@ -16,9 +16,9 @@ class Search extends Component {
     
     render() {
         return (
-            <form className="search" onSubmit={this.onSearch}>
+            <form className="search" onSubmit={this.search}>
                 <input type="text"
-                    onChange={this.oninputChange}
+                    onChange={this.onInputChange}
                     value={this.state.value}
                     className="search__input"
                 />
