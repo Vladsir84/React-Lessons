@@ -8,12 +8,14 @@ const rootElement = document.querySelector('#root');
 
 const users = [
     {
-        name: Tad,
+        id: 1,
+        name: 'Tad',
         age: 18,
     },
 
     {
-        name: Anna,
+        id: 2,
+        name: 'Anna',
         age: 45,
     },
 ]

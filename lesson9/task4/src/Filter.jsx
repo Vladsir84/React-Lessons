@@ -6,7 +6,7 @@ const Filter = props => {
         <div className="filter">
             <span className="filter__count">{props.count}</span>
             <input type="text" 
-             class="filter__input" 
+             className="filter__input" 
              value={props.filterText}
              onChange={props.onChange} />
         </div>
