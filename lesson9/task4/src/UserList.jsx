@@ -16,7 +16,7 @@ class UserList extends Component {
             const { name, value } = event.target;
 
             this.setState({
-                [name]: val,
+                [name]: value,
             });
         };
 
