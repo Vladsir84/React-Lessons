@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import User from User;
+import User from './User';
 import Filter from './Filter';
 
 class UserList extends Component {
@@ -11,12 +11,15 @@ class UserList extends Component {
             userNames: props.users,
         };
 
-
+    }
         onChange = event => {
             const { name, value } = event.target;
 
+            const arr = this.props.users.filter(user => user.name.toLowercase())                       
+            
             this.setState({
                 [name]: value,
+                userNames: arr,
             });
         };
 
@@ -24,15 +27,18 @@ class UserList extends Component {
         render() {
             return (
                 <div>
-                    <Filter />
+                    <Filter count={this.state.name} 
+                            onChange={this.onChange}
+                            filterText={this.state.name}
+                    />
                     <ul className="users">
-                        {usersList.map(user => (
+                        {this.state.userNames.map(({name, age}) => 
                             <User key={name} age={age} />
-                        ))}
+                        )}
                     </ul>
                 </div>
             );
         }
     }
-}
+
 export default UserList
