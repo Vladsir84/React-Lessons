@@ -27,7 +27,7 @@ class UserList extends Component {
         render() {
             return (
                 <div>
-                    <Filter count={this.state.name} 
+                    <Filter count={this.state.userNames.length} 
                             onChange={this.onChange}
                             filterText={this.state.name}
                     />
