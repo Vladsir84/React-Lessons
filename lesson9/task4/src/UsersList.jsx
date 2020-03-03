@@ -15,7 +15,7 @@ class UsersList extends Component {
         onChange = event => {
             const { name, value } = event.target;
 
-            const arr = this.props.users.filter(user => user.name.toLowercase())                       
+            const arr = this.props.users.filter(user => user.name.toLowerCase().includes(value.toLowerCase()));
             
             this.setState({
                 [name]: value,
@@ -32,8 +32,8 @@ class UsersList extends Component {
                             filterText={this.state.name}
                     />
                     <ul className="users">
-                        {this.state.userNames.map(({name, age}) => 
-                            <User key={name} age={age} />
+                        {this.state.userNames.map(({id, name, age}) => 
+                            <User key={id} name={name} age={age} />
                         )}
                     </ul>
                 </div>
