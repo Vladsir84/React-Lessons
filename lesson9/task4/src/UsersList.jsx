@@ -15,7 +15,7 @@ class UsersList extends Component {
         onChange = event => {
             const { name, value } = event.target;
 
-            const arr = this.props.users.filter(user => user.name.toLowerCase().includes(value.toLowerCase()));
+            const arr = this.props.users.filter(user => user.name.toUpperCase().includes(value.toUpperCase()));
             
             this.setState({
                 [name]: value,
