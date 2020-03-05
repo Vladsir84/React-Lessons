@@ -7,4 +7,4 @@ import App from './App';
 const rootElement = document.querySelector('#root');
 
 
-ReactDOM.render(<App userId="github" />, rootElement);
+ReactDOM.render(<App />, rootElement);
