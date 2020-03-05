@@ -12,7 +12,7 @@ class Page extends Component {
      };
      
      handleChange = event => {
-        this.props.handleChange(event);
+        // this.props.handleChange(event);
         const { name, value } = event.target;
         this.setState({
             userData: {
@@ -20,7 +20,7 @@ class Page extends Component {
                [name]: value
             }   
         });
-    }
+    };
   
     render() {
 

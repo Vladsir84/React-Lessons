@@ -5,7 +5,8 @@ const Profile = ({ userData, handleChange }) => {
     
     return (
             <div className="column">
-                <UserForm userData={userData} handleChange={handleChange} />
+                <UserForm userData={userData} 
+                 handleChange={handleChange} />
             </div>
             
         );
