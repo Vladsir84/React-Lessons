@@ -21,7 +21,7 @@ class ShoppingCart extends Component {
     };
     
     render() {
-
+       
         return (
             <div className="column">
                 <CartTitle userName={this.props.userName} count={this.state.cartItems.length}/>
