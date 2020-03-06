@@ -3,6 +3,7 @@ import ProductsList from './ProductsList';
 import CartTitle from './CartTitle';
 
 class ShoppingCart extends Component {
+    
     state = {
         cartItems: [
             {

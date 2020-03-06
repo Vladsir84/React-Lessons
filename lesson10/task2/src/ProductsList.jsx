@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class ProductsList extends Component {
+const ProductsList = ({ cartItems }) => {
     
 
-    render() {
-        const total = this.props.cartItems.reduce(
+    
+        const total = cartItems.reduce(
             (acc, item) => acc + item.price, 0,
         );
 
@@ -12,10 +12,10 @@ class ProductsList extends Component {
         return (
             <div className="products">
                 <ul className="products__list">
-                    {this.props.cartItems.map(({ id, name, price }) =>  
-                      <li key={id} className="products__list-item">
-                         <span className="products__item-name">{name}</span>
-                         <span className="products__item-price">{price}</span>
+                    {cartItems.map( item  =>  
+                      <li key={item.id} className="products__list-item">
+                         <span className="products__item-name">{item.name}</span>
+                         <span className="products__item-price">{item.price}</span>
                       </li>
                     )}
                 </ul>
@@ -25,6 +25,6 @@ class ProductsList extends Component {
 
     }
 
-}
+
 
 export default ProductsList;
