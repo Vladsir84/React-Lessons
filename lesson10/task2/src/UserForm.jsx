@@ -4,7 +4,7 @@ const UserForm = ({ userData, handleChange }) => {
     
    
     return (
-        // <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
+       
         <form className="user-form">
             <input
                 type="text"
