@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import FiltrableProductTable from './FiltrableProductTable';
+import FilterableProductTable from './FilterableProductTable';
 
 
 const rootElement = document.querySelector('#root');
@@ -16,4 +16,4 @@ const PRODUCTS = [
   ];
 
 
-ReactDOM.render(<FiltrableProductTable products={PRODUCTS} />, rootElement);
+ReactDOM.render(<FilterableProductTable products={PRODUCTS} />, rootElement);
