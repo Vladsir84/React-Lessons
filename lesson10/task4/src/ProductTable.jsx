@@ -1,16 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ProductRow from './ProductRow';
 import ProductCategoryRow from './ProductCategoryRow';
 
-class ProductTable extends Component {
-    render() {
-      const filterText = this.props.filterText;
-      const inStockOnly = this.props.inStockOnly;
-  
+const ProductTable = ({ filterText, inStockOnly, products }) => {
+     
       const rows = [];
       let lastCategory = null;
   
-      this.props.products.forEach((product) => {
+      products.forEach((product) => {
         if (product.name.indexOf(filterText) === -1) {
           return;
         }
@@ -45,6 +42,6 @@ class ProductTable extends Component {
         </table>
       );
     }
-  }
+  
   
   export default ProductTable;
