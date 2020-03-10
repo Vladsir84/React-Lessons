@@ -29,7 +29,15 @@ class App extends Component {
     return (
 
       <div className="app">
-        <button className="expand__toggle-btn" onClick={this.showExpand}><i className="fas fa-chevron-up"></i></button>
+        <button className="expand__toggle-btn" onClick={this.showExpand}>
+          <i className={
+            this.state.isOpen ?
+              "fas fa-chevron-up" :
+              "fas fa-chevron-down"
+          }
+          ></i>
+
+        </button>
         <Expand
           isOpen={this.state.isOpen}
           onClose={this.hideExpand}
