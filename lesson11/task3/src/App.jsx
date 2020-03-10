@@ -33,7 +33,7 @@ class App extends Component {
         <Expand
           isOpen={this.state.isOpen}
           onClose={this.hideExpand}
-          title="some title">
+          title="Some title">
           {elem}
         </Expand>
       </div>
