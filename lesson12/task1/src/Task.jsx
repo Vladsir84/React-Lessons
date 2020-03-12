@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const Task = ({ id, done, text, onChange, onDelete }) => {
  
@@ -18,3 +19,12 @@ const Task = ({ id, done, text, onChange, onDelete }) => {
 };
 
 export default Task;
+
+Task.propTypes = {
+    text: PropTypes.string,
+    done: PropTypes.bool,
+    id: PropTypes.string,
+    onDelete: PropTypes.func,
+    onChange: PropTypes.func
+
+}

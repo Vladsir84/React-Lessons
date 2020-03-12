@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Task from './Task';
 import CreateTaskInput from './CreateTaskInput';
-import { createTask, fetchTasksList, updateTask, deleteTask } from './tasksGateway';
+import { createTask, fetchTasksList, updateTask, deleteTask } from './TasksListGateway';
 
 
 class TasksList extends Component {

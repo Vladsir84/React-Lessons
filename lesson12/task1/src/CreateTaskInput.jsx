@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class CreateTaskInput extends Component {
     state = {
@@ -36,9 +37,11 @@ class CreateTaskInput extends Component {
         );
     };
 }
+
 export default CreateTaskInput
 
 
-// 1. Take text from input
-// 2. Create task with this text
-// 3. Add cerated task to the list
+CreateTaskInput.propTypes = {
+    onCreateTask: PropTypes.func,
+}
+
