@@ -1,3 +1,5 @@
+//index.js
+
 const rootElement = document.querySelector('#root');
 
 // const renderGreeting = elem => {
@@ -6,7 +8,7 @@ const rootElement = document.querySelector('#root');
 
 //     const titleElem = document.createElement('h1');
 //     titleElem.classList.add('greeting__title');
-//     titleElem.textContent = 'Hello, world!';
+//     titleElem.textContent = 'Hello, world!'; 
 
 //     const textElem = document.createElement('p');
 //     textElem.classList.add('greeting__text');
@@ -20,15 +22,19 @@ const rootElement = document.querySelector('#root');
 // renderGreeting(rootElement);
 
 const element = React.createElement(
-    'div', { className: 'greeting' },
+    'div',
+    { className: 'greeting' },
     React.createElement(
-        'div', { className: 'greeting__title' },
+        'div',
+        { className: 'greeting__title' },
         'Hello, world!'
     ),
     React.createElement(
-        'div', { className: 'greeting__text' },
-        'I\'m learning React'
+        'div',
+        { className: 'greeting__text' },
+        'I\'m learning react'
     ),
+
 );
 
-ReactDOM.render(element, rootElement);
+ReactDOM.render(element, rootElement)
