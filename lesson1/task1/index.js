@@ -1,8 +1,3 @@
-// < div class = "greeting" > Hello, React! < /div>
-
-
-
-
 const rootElement = document.querySelector('#root');
 
 // const greetingElem = document.createElement('div');
@@ -12,9 +7,9 @@ const rootElement = document.querySelector('#root');
 // rootElement.append(greetingElem);
 
 const greetingElem = React.createElement(
-    'div', { className: 'greeting' },
+    'div',
+    { className: 'greeting' },
     'Hello, React!'
 );
-
 
 ReactDOM.render(greetingElem, rootElement);
