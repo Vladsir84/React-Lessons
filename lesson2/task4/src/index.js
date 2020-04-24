@@ -11,7 +11,7 @@ const element = (
           <main className="todo-list">
                <div className="actions">
                     <input className="task-input" type="text" />
-                    <button className="btn create-task-btn">Create</button> 
+                    <button className="btn create-task-btn">Create</button>
                </div>
                <ul className="list"></ul>
           </main>

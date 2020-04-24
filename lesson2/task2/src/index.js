@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './styles.css';
 
 const rootElement = document.querySelector('#root');
-const style = { 
-      color: 'red', 
-      fontWeight: 700 
-     };
+const style = {
+     color: 'red',
+     fontWeight: 700
+};
 
 const element = (
      <main className="page">
