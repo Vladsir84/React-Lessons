@@ -1,11 +1,6 @@
 import React from 'react';
 
-
-const Avatar = (props) => {
-    console.log(props);   // {avatarUrl: "https://avatars3.githubusercontent.com/u10001", name: "Tom"}
-                            //              avatarUrl: "https://avatars3.githubusercontent.com/u10001"
-                              //            name: "Tom"
-                                     // функция принимает два параметра: аватар и имя
+const UserAvatar = props => {
     return (
         <img
             className="avatar"
@@ -13,6 +8,6 @@ const Avatar = (props) => {
             alt={props.name}
         />
     );
-}
+};
 
-export default Avatar;
+export default UserAvatar;
