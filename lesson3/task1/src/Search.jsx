@@ -10,7 +10,7 @@ const SearchField = (props) => {
                 <button className="search__button">Search</button>
             </div>
         </div>
-    );    
+    );
 };
 
 export default SearchField;
