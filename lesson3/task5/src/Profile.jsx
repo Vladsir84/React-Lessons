@@ -1,19 +1,22 @@
 import React from "react";
 import moment from "moment";
 
-const getDate = date => moment(date).format("DD MMM YY");
+
+const formatDate = date => moment(date).format("DD MMM YY");
 
 function Profile(props) {
   return (
-    <>
+
+    <div className="greeting">
       <div className="profile__name">
-        {`${props.userData.firstName} ${props.userData.lastName}`}
+        {`${props.user.firstName} ${props.user.lastName}`}
       </div>
       <div className="profile__birth">
-        {`Was born ${getDate(props.userData.birthDate)} in ${props.userData.birthPlace}`}
+        {`Was born ${formatDate(props.user.birthDate)} in ${props.user.birthPlace}`}
       </div>
-    </>
+    </div>
+
   );
-};
+}
 
 export default Profile;
