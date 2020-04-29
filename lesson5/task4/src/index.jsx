@@ -6,4 +6,4 @@ import Colors from './Colors';
 const rootElement = document.querySelector('#root');
 
 
-ReactDOM.render(<Colors/>, rootElement);
+ReactDOM.render(<Colors />, rootElement);
