@@ -6,4 +6,4 @@ import ColorPicker from './ColorPicker';
 const rootElement = document.querySelector('#root');
 
 
-ReactDOM.render(<ColorPicker/>, rootElement);
+ReactDOM.render(<ColorPicker />, rootElement);
