@@ -8,7 +8,7 @@ const Greeting = props => {
     };
 
     return <GuestGreeting />;
-    
+
 };
 
 export default Greeting;
