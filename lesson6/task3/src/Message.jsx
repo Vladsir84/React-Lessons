@@ -5,11 +5,11 @@ const Message = ({ text }) => {
       return null;
    }
    return (
-       <div className="message">
-          {text}
-       </div>
-  
-    );
+      <div className="message">
+         {text}
+      </div>
+
+   );
 };
 
 export default Message;
