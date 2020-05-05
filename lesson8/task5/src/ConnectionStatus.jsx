@@ -4,41 +4,41 @@ class ConnectionStatus extends Component {
     constructor(props) {
         super(props);
         this.state = {
-        state: true        // состояние по умолчанию
+            state: true
         }
     }
 
-    componentDidMount() {                                             // подписка на событие
+    componentDidMount() {
         window.addEventListener('online', this.onlineStatus);
-        window.addEventListener('offline', this.offlineStatus);  
+        window.addEventListener('offline', this.offlineStatus);
     }
 
 
-    componentWillUnmount() {                                         // отписка от события
+    componentWillUnmount() {
         window.removeEventListener('online', this.onlineStatus);
         window.removeEventListener('offline', this.offlineStatus);
     }
 
-   
+
     onlineStatus = () => {
         this.setState({
-           state: true
+            state: true
         });
-    }                                    // статусы состояния
+    }
 
     offlineStatus = () => {
         this.setState({
-          state: false
+            state: false
         });
     }
-    
-    
+
+
     render() {
-        return ( 
-        this.state.state 
-        ? <div className="status">online</div>
-        : <div className="status status_offline">offline</div>
-        
+        return (
+            this.state.state
+                ? <div className="status">online</div>
+                : <div className="status status_offline">offline</div>
+
         )
     }
 }
