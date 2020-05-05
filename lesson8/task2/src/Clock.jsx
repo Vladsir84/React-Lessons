@@ -5,8 +5,8 @@ function timeToString(offset) {
     const getTime = new Date();
     const timeWthOffset = getTime.setHours(getTime.getHours() + offset);
     return moment(timeWthOffset).format('LTS');
-  
-  }
+
+}
 
 
 class Clock extends Component {

@@ -1,37 +1,44 @@
 import React, { Component } from 'react';
-import Clock from './Clock'
+import moment from 'moment';
 
 
 
-class App extends Component {
+const getTimeWidthOffset = offset => {
+    const currentTime = new Date();
+    const utcOffset = currentTime.getTimezoneOffset() / 60;
+    return moment(currentTime.setHours(currentTime.getHours() + offset + utcOffset)).format('LTS');
+}
+
+
+class Clock extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            visible: true,
+            date: getTimeWidthOffset(props.offset),
         };
-
-        this.toggle = this.toggle.bind(this);
     }
 
+    componentDidMount() {
+        this.interval = setInterval(() => {
+            this.setState({
+                date: getTimeWidthOffset(props.offset),
+            });
+        }, 1000);
+    }
 
-    toggle() {
-        this.setState({
-            visible: !this.state.visible,
-        });
-    };
+    componentWillUnmount() {
+        clearInterval(this.interval);
+    }
+
     render() {
         return (
-            <>
-                <button onClick={this.toggle}>Toggle</button>
-                <>
-                    <div>{this.state.visible && <Clock location={'New York'} offset={-5} />}</div>
-                    <div>{this.state.visible && <Clock location={'Kyiv'} offset={+2} />}</div>
-                    <div>{this.state.visible && <Clock location={'London'} offset={0} />}</div>
-                </>
-                
-       </>
-        );
+            <div className="clock">
+                <div className="clock__location">{this.props.location}</div>
+                <div className="clock__time">{this.state.date}</div>
+            </div>
+
+        )
     }
 }
 
-export default App;
+export default Clock;
