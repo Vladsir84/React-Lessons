@@ -12,7 +12,7 @@ class Life extends Component {
     
     shouldComponentUpdate() {
         console.log(
-            'shoudlComponentUpdate(nextProps, nextState): decide to render or not to render',
+            'shouldComponentUpdate(nextProps, nextState): decide to render or not to render'
         );
         return true;
     }
@@ -26,7 +26,7 @@ class Life extends Component {
     }
     render() {
         console.log('return React element to build DOM');
-        return  <div className="number">Number</div>
+        return  <div className="number">11</div>
     }
 };
 
