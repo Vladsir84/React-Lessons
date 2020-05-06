@@ -1,62 +1,62 @@
 import React, { Component } from 'react';
 
 class UserForm extends Component {
-    
+
     handleSubmit = event => {
-       event.preventDefault();
-       const formData = [...new FormData(this.formRef)]
-       .reduce((acc, [name, value]) => ({...acc, [name]: value }), {},
-       )
-       this.props.onSubmit(formData);
+        event.preventDefault();
+        const formData = [...new FormData(this.formRef)]
+            .reduce((acc, [name, value]) => ({ ...acc, [name]: value }), {},
+            )
+        this.props.onSubmit(formData);
     };
-    
+
     setRef = node => {
         this.formRef = node;
     }
-    
-    
+
+
     render() {
         return (
             <form ref={this.setRef} className="login-form" onSubmit={this.handleSubmit}>
                 <h1 className="form-title">Profile</h1>
                 <div className="form-control">
                     <label className="form-label" htmlFor="name">
-                       Name
+                        Name
                     </label>
-                    <input 
+                    <input
                         className="form-input"
-                        type="text" 
+                        type="text"
                         id="name"
-                        name="name" 
-                       
+                        name="name"
+
                     />
                 </div>
                 <div className="form-control">
                     <label className="form-label" htmlFor="student">
                         Student
                     </label>
-                    <input 
+                    <input
                         className="form-input"
-                       
-                        type="checkbox" 
+
+                        type="checkbox"
                         id="student"
                         name="student"
-                        
+
                     />
                 </div>
                 <div className="form-control">
-                    <label 
+                    <label
                         className="form-label"
                         id="occupation"
                         htmlFor="occupation"
                     >
                         Occupation
                     </label>
-                    <select 
-                       
+                    <select
+
                         name="occupation"
                         className="form-input"
-                        
+
                     >
                         <option value="london">London</option>
                         <option value="new-york">New York</option>
@@ -72,7 +72,7 @@ class UserForm extends Component {
                     </label>
                     <textarea name="about"
                         className="form-input"
-                       
+
                     />
                 </div>
                 <button className="submit-button" type="submit">Submit</button>
