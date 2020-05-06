@@ -7,8 +7,8 @@ const App = () => {
     return (
         <UserForm onSubmit={userData => console.log(userData)} />
 
-        );
-    };
+    );
+};
 
 
 export default App;

@@ -14,33 +14,33 @@ class UserForm extends Component {
         const { name, value, checked, type } = event.target
 
         const val = type === 'checkbox'
-           ? checked
-           : value;
-        
+            ? checked
+            : value;
+
         this.setState({
             [name]: val,
         });
     };
 
     handleSubmit = event => {
-      event.preventDefault();
-      this.props.onSubmit(this.state);
+        event.preventDefault();
+        this.props.onSubmit(this.state);
     }
-    
+
     render() {
         return (
             <form className="login-form" onSubmit={this.handleSubmit}>
                 <h1 className="form-title">Profile</h1>
                 <div className="form-control">
                     <label className="form-label" htmlFor="name">
-                       Name
+                        Name
                     </label>
-                    <input 
+                    <input
                         className="form-input"
                         value={this.state.name}
-                        type="text" 
+                        type="text"
                         id="name"
-                        name="name" 
+                        name="name"
                         onChange={this.handleChange}
                     />
                 </div>
@@ -48,24 +48,24 @@ class UserForm extends Component {
                     <label className="form-label" htmlFor="student">
                         Student
                     </label>
-                    <input 
+                    <input
                         className="form-input"
                         value={this.state.student}
-                        type="checkbox" 
+                        type="checkbox"
                         id="student"
                         name="student"
                         onChange={this.handleChange}
                     />
                 </div>
                 <div className="form-control">
-                    <label 
+                    <label
                         className="form-label"
                         id="occupation"
                         htmlFor="occupation"
                     >
                         Occupation
                     </label>
-                    <select 
+                    <select
                         value={this.state.occupation}
                         name="occupation"
                         className="form-input"
