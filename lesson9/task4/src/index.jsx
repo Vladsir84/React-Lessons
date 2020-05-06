@@ -4,22 +4,41 @@ import './index.scss';
 import UsersList from './UsersList';
 
 
-const rootElement = document.querySelector('#root');
-
 const users = [
     {
-        id: 1,
-        name: 'Tad',
-        age: 18,
+        id: 'id-0',
+        age: 21,
+        name: 'Bob',
     },
-
     {
-        id: 2,
-        name: 'Anna',
-        age: 45,
+        id: 'id-1',
+        age: 17,
+        name: 'Tom',
     },
-]
+    {
+        id: 'id-2',
+        age: 18,
+        name: 'Tad',
+    },
+    {
+        id: 'id-3',
+        age: 45,
+        name: 'Kerry',
+    },
+    {
+        id: 'id-4',
+        age: 33,
+        name: 'James',
+    },
+    {
+        id: 'id-5',
+        age: 50,
+        name: 'Lars',
+    },
+ 
+];
 
 
+const rootElement = document.querySelector('#root');
 
-ReactDOM.render(<UsersList users={users} />, rootElement);
+ReactDOM.render(<UsersList users={users}/>, rootElement);
