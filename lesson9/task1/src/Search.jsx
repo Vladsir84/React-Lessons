@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 
-class Search extends Component {
-    state = { value: '' }
 
-    onInputChange = event => {
-     
+class Search extends Component {
+    state = { value: 'Search text:' };
+
+    handleChange = event => {
         this.setState({ value: event.target.value })
     }
 
-    search = event => {
+    search = () => {
         event.preventDefault();
-        alert(`Search text: ${this.state.value}`);
+        alert(this.state.value);
     }
-    
-    
+
     render() {
         return (
             <form className="search" onSubmit={this.search}>
                 <input type="text"
-                    onChange={this.onInputChange}
+                    onChange={this.handleChange}
                     value={this.state.value}
                     className="search__input"
                 />
-                <button className="search__button" type="submit">Search</button>
+                <button className="search__button" type="submit">
+                    Search
+                    </button>
             </form>
-
         );
     }
 }
