@@ -1,10 +1,10 @@
 import React from 'react';
 
 const UserForm = ({ userData, handleChange }) => {
-    
-   
+
+
     return (
-       
+
         <form className="user-form">
             <input
                 type="text"
@@ -18,7 +18,7 @@ const UserForm = ({ userData, handleChange }) => {
                 name="lastName"
                 className="user-form__input"
                 value={userData.lastName}
-                onChange={handleChange} 
+                onChange={handleChange}
             />
         </form>
     );
