@@ -25,7 +25,6 @@ class Page extends Component {
     };
     render() {
 
-
         return (
             <div className="page">
                 <header className="header">

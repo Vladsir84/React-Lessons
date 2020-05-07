@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 
 class UserProfile extends Component {
-    
+
     render() {
         if (!this.props.userData) {
             return null;
         }
-        
+
         const { avatar_url, location, name } = this.props.userData;
-        
+
         return (
             <div className="user">
                 <img alt="User Avatar" src={avatar_url} className="user__avatar" />
