@@ -27,15 +27,15 @@ class Calculator extends React.Component {
     super(props);
     this.handleCelsiusChange = this.handleCelsiusChange.bind(this);
     this.handleFahrenheitChange = this.handleFahrenheitChange.bind(this);
-    this.state = {temperature: '', scale: 'c'};
+    this.state = { temperature: '', scale: 'c' };
   }
 
   handleCelsiusChange(temperature) {
-    this.setState({scale: 'c', temperature});
+    this.setState({ scale: 'c', temperature });
   }
 
   handleFahrenheitChange(temperature) {
-    this.setState({scale: 'f', temperature});
+    this.setState({ scale: 'f', temperature });
   }
 
   render() {
@@ -60,5 +60,5 @@ class Calculator extends React.Component {
     );
   }
 }
-  
-  export default Calculator;
+
+export default Calculator;
