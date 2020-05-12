@@ -3,11 +3,11 @@ import React from 'react';
 const Pagination = ({
     goPrev,
     goNext,
-    currentPage,                 // аргументы функции Pagination
+    currentPage,                 
     totalItems,
     itemsPerPage,
 }) => {
-    const prevPageAvailable = currentPage > 0;           // предыдущая страница (начинается с 1)
+    const prevPageAvailable = currentPage > 0;           
     const nextPageAvailable =                            
         currentPage < Math.ceil(totalItems / itemsPerPage) - 1;  
     return (
@@ -15,7 +15,7 @@ const Pagination = ({
             <button
                 className="btn"
                 onClick={goPrev}
-                disabled={!prevPageAvailable}      // ограничение перелистывания
+                disabled={!prevPageAvailable}      
             >
                 {prevPageAvailable && '←'}
             </button>
