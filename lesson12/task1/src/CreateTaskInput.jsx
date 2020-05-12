@@ -13,11 +13,11 @@ class CreateTaskInput extends Component {
     };
 
     handleTaskCreate = () => {
-       this.props.onCreate(this.state.value); 
-       this.setState({ value: '' });
+        this.props.onCreate(this.state.value);
+        this.setState({ value: '' });
     };
-    
-    
+
+
     render() {
         return (
             <div className="create-task">

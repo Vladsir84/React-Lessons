@@ -32,18 +32,18 @@ class TasksList extends Component {
     };
 
     handleTaskStatusChange = id => {
-        const { done, text } = this.state.tasks.find(task => task.id === id); 
-            const updatedTask = {
-                text,
-                done: !done,
-            };
-            
-        updateTask( id, updatedTask ).then(() => this.fetchTasks());    
+        const { done, text } = this.state.tasks.find(task => task.id === id);
+        const updatedTask = {
+            text,
+            done: !done,
+        };
+
+        updateTask(id, updatedTask).then(() => this.fetchTasks());
     };
-    
+
     handleTaskDelete = id => {
         deleteTask(id)
-          .then(() => this.fetchTasks());
+            .then(() => this.fetchTasks());
     };
 
     render() {

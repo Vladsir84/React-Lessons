@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Task = ({ id, done, text, onChange, onDelete }) => {
- 
+
     return (
-        <li className={classNames('list-item', { 'list-item_done' : done })}>
+        <li className={classNames('list-item', { 'list-item_done': done })}>
             <input type="checkbox"
                 className="list-item__checkbox"
                 defaultChecked={done}
