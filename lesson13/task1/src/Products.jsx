@@ -8,7 +8,7 @@ function Products() {
             <p>We will add some products. Later... 😇</p>
             <Link to="/contacts">Contacts</Link>
         </div>
-    )
-}
+    );
+};
 
 export default Products;
