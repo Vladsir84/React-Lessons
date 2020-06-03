@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import Products from './Products';
 import Home from './Home';
-import Product from './Product';
+
 
 
 const App = () => {
