@@ -25,14 +25,14 @@ const ConnectionStatus = () => {
 
     }, []);
 
+    const classStatus = connectionStatus === 'online' 
+       ? "status" 
+       : "status status_offline";
    
-    
     return (
-        useState
-            ?  <div className="status">{connectionStatus}</div>
-            :  <div className="status status_offline">{connectionStatus}</div>
+        
+        <div className={classStatus}>{connectionStatus}</div>
     )
-
 };
 
 
