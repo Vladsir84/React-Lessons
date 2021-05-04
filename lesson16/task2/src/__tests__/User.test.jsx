@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import User from '../User';
-import { getUsersList } from '../usersGateway';
+import { getUserData } from '../usersGateway';
 
 jest.mock('../usersGateway', () => {
   return {
-    getUsersList: jest.fn(() => Promise.resolve())
+    getUserData: jest.fn(() => Promise.resolve())
   };
 });
 
@@ -30,6 +30,6 @@ describe('User', () => {
 
   it('should render', () => {
     shallow(<User />);
-    expect(getUsersList).toBeCalled();
+    expect(getUserData).toBeCalled();
   });
 });

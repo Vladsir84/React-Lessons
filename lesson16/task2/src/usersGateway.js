@@ -1,1 +1,1 @@
-export const getUsersList = () => {};
+export const getUserData = () => {};
